@@ -1,0 +1,163 @@
+/* body */
+@keyframes loadingViewRotate {
+  16.67% {
+    box-shadow: 0px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; }
+  33.33% {
+    box-shadow: 15px 0px 0 4px #ffe768, 0px 0px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; }
+  50% {
+    box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, 0px 0px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; }
+  66.67% {
+    box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, 0px 0px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; }
+  88.88% {
+    box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 0px 0px 0 4px #644972; }
+  100% {
+    transform: rotate(-360deg);
+    box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; } }
+
+/* CSS Document */
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 5px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #111; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #555; }
+
+body,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+ul {
+  margin: 0;
+  padding: 0; }
+
+body {
+  padding: 0 !important; }
+
+body,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+td,
+th {
+  font-size: 12px; }
+
+li,
+ol,
+ul {
+  list-style: none; }
+
+fieldset,
+img {
+  border: none;
+  vertical-align: middle; }
+
+legend {
+  display: none; }
+
+a {
+  text-decoration: none; }
+  a:ACTIVE, a:VISITED {
+    text-decoration: none; }
+
+address {
+  font-style: normal; }
+
+:-moz-placeholder,
+:-ms-input-placeholder,
+::-moz-placeholder,
+::-webkit-input-placeholder {
+  text-transform: initial !important; }
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important; }
+
+input:focus {
+  text-transform: lowercase; }
+
+select {
+  /*for firefox*/
+  -moz-appearance: none;
+  /*for chrome*/
+  -webkit-appearance: none; }
+
+/*for IE10*/
+select::-ms-expand {
+  display: none; }
+
+/* common class */
+body {
+  overflow: hidden !important;
+  cursor: default !important; }
+
+/* This used to work for parent element of button divs */
+/* But it is not enough now, below dont hide play button parent div */
+video::-webkit-media-controls {
+  display: none !important; }
+
+video::-webkit-media-controls-enclosure {
+  display: none !important; }
+
+*::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none; }
+
+/* Old shadow dom for play button */
+*::--webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none; }
+
+/* New shadow dom for play button */
+/* This one works */
+*::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none; }
+
+.screen_out {
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  z-index: -1; }
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+  clear: both; }
+
+.pageLink {
+  display: block;
+  text-decoration: underline; }
+
+/*# sourceMappingURL=common.css.map */

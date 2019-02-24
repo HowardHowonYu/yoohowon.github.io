@@ -1,0 +1,74 @@
+<!-- <section id="section__main--wrap" ng-style="sectionWrapStyle"> -->
+<section id="section__main--wrap">
+  <div class="section--box section__box--expend" ng-class="{
+      'section--about--color' : main.section == 'about',
+      'section--portfolio--color' : main.section == 'portfolio'
+    }">
+
+    <div class="ng-hide zoomInAndOut section--about section--about--color"
+         ng-show="main.section == 'about' && main.showNav">
+      <div class="container--profile--info" ng-style="aboutInfoCardStyle">
+        <img class="section--profile--photo"/>
+        <div class="section--profile--card">
+          <div class="section--profile--cardText">
+            <p>
+              <i class="fas fa-user-circle section--profile--icon"></i> {{ glob["Name"] }}
+            </p>
+            <p>
+              <i class="fas fa-envelope-square section--profile--icon"></i> Yoohowon@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+      <br class="section--br"/>
+      <div class="section--profile--text" ng-style="aboutTextHeight">
+        <p class="section--skills--text">
+          Summary
+        </p>
+        <p>
+          {{ glob["About First Paragraph"] }}
+        </p>
+        <p>
+          {{ glob["About Second Paragraph"] }}
+        </p>
+        <p>
+          {{ glob["About Third Paragraph"] }}
+        </p>
+        <p>
+          {{ glob["About Forth Paragraph"] }}
+        </p>
+        <p class="section--skills--text">
+          Skills
+        </p>
+        <ul class="section--skills--ul">
+          <li ng-repeat="skill in skills">
+            {{ skill.txt }}
+          </li>
+        </ul>
+      </div>
+    </div><!-- info card -->
+
+    <div class="ng-hide zoomInAndOut section--portfolio section--portfolio--color"
+         ng-show="main.section == 'work' && main.showNav">
+      <portfolio></portfolio>
+    </div>
+
+    <div class="ng-hide zoomInAndOut"
+         ng-show="main.section == 'contact' && main.showNav">
+      <div class="container--profile--info" ng-style="aboutInfoCardStyle">
+        <img class="section--profile--photo"/>
+        <div class="section--profile--card">
+          <div class="section--profile--cardText">
+            <p>
+              <i class="fas fa-user-circle section--profile--icon"></i> {{ glob["Name"] }}
+            </p>
+            <p>
+              <i class="fas fa-envelope-square section--profile--icon"></i> Yoohowon@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

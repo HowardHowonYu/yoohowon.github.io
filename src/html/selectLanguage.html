@@ -1,0 +1,21 @@
+<div id="section__first--languageSelect">
+  <div class="ng-hide zoomInAndOut languageSelect--wrap"
+       ng-style="languageSelectWrapStyle"
+       ng-show="isJustEntered">
+    <h1 class="languageSelect--languageSelectTxt">
+      {{ glob["Which language do you prefer?"] }}
+    </h1>
+    <div class="languageSelect--div">
+      <div class="languageSelect--option"
+           ng-repeat="languageOption in languageList"
+           ng-class="{
+             'languageOption--hover' : mouseover == $index
+           }"
+           ng-click="selectLanguage($index)"
+           ng-mouseleave = "mouseover = -1"
+           ng-mouseover = "mouseover = $index">
+        {{ languageOption.txt }}
+      </div>
+    </div>
+  </div>
+</div>

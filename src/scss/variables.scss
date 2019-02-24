@@ -1,0 +1,230 @@
+@mixin backgroundImg($url, $size){
+  background-image: url($url);
+  background-size: $size;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+@mixin normal_transition($time){
+  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) $time;
+  -moz-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) $time;
+  -ms-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) $time;
+  -o-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) $time;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) $time;
+}
+
+@mixin backgroundSetting($size){
+  background-size:$size;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+@mixin tumblrTransition($time){
+  -webkit-transition: all ease-in-out $time;
+  -moz-transition: all ease-in-out $time;
+  -ms-transition: all ease-in-out $time;
+  -o-transition: all ease-in-out $time;
+  transition: all ease-in-out $time;
+}
+
+@mixin transition_before(){
+  -webkit-transition: 0s cubic-bezier(0.825, 0, 0.5, 1) all;
+  -moz-transition: 0s cubic-bezier(0.825, 0, 0.5, 1) all;
+  -ms-transition: 0s cubic-bezier(0.825, 0, 0.5, 1) all;
+  -o-transition: 0s cubic-bezier(0.825, 0, 0.5, 1) all;
+  transition: 0s cubic-bezier(0.825, 0, 0.5, 1) all;
+}
+
+@mixin transition_after($speed){
+  -webkit-transition: $speed cubic-bezier(0.825, 0, 0.5, 1) all;
+  -moz-transition: $speed cubic-bezier(0.825, 0, 0.5, 1) all;
+  -ms-transition: $speed cubic-bezier(0.825, 0, 0.5, 1) all;
+  -o-transition: $speed cubic-bezier(0.825, 0, 0.5, 1) all;
+  transition: $speed cubic-bezier(0.825, 0, 0.5, 1) all;
+}
+
+@mixin fontFace($url, $lang, $fontFamily){
+  @font-face {
+    font-family : $fontFamily;
+    src: url("../font/" + $lang + "/" + $url) format('truetype');
+  }
+
+}
+
+@mixin setHorizontalCenter($width){
+  width: $width;
+  left: 50%;
+  margin-left: -$width/2;
+
+}
+@mixin setVerticalCenter($height){
+  height: $height;
+  top: 50%;
+  margin-top: -$height/2;
+
+}
+
+@mixin loadingCircle(){
+ border-radius:50%;
+ height:2px;
+ width:2px; /* To allow border-radius to work */
+ position:absolute;
+ top:50%;
+ left:50%;
+ margin-top:-1px;
+ margin-left:-1px;
+ background-color: #fff;
+ box-shadow:
+         15px 0px 0 4px $awesome,
+         4.65px -14.25px 0 4px $nice,
+         -12.15px -8.85px 0 4px $notMuch,
+         -12.15px 8.85px 0 4px $kindOfBad,
+         4.65px 14.25px 0 4px $bad;
+ -webkit-animation:loadingViewRotate 3s infinite linear;
+ animation:loadingViewRotate 3s infinite linear;
+}
+
+@mixin setAbsoluteCenter($width, $height){
+  @include setHorizontalCenter($width);
+  @include setVerticalCenter($height);
+
+}
+
+@mixin setPartialBorderRadius($first, $second, $third, $forth){
+  -webkit-border-radius: $first $second $third $forth;
+  border-radius: $first $second $third $forth;
+
+}
+
+// $mainFont : 'Bowlby One SC', 'Do Hyeon', cursive;
+// $textFont : 'Oswald', 'Do Hyeon', sans-serif;
+
+$mainFont : 'Arial';
+$textFont : 'Arial';
+
+/* body */
+$awesome : #ffe768;
+$nice : #cb4a44;
+$notMuch : #00a178;
+$kindOfBad : #85cfec;
+$bad : #644972;
+$awesomeRgb : rgb(255, 231, 104);
+$niceRgb : rgb(203, 74, 68);
+$notMuchRgb : rgb(0, 161, 120);
+$kindOfBadRgb : rgb(133, 207, 236);
+$badRgb : rgb(100, 73, 114);
+$otherId : rgb(103, 112, 232);
+
+$commonBorderRadius : 8px;
+$boxShadow : 1px 1px 3px #111;
+$textShadow : 1px 1px 3px #111;
+$dateBorderRadius : 8px;
+
+@mixin setBackgroundColorRGBA($rgb, $opacity){
+  background-color: rgba($rgb, $opacity);
+
+}
+
+@keyframes loadingViewRotate {
+  16.67%   {
+    box-shadow:
+            0px 0px 0 4px $awesome,
+            4.65px -14.25px 0 4px $nice,
+            -12.15px -8.85px 0 4px $notMuch,
+            -12.15px 8.85px 0 4px $kindOfBad,
+            4.65px 14.25px 0 4px $bad;
+  }
+  33.33%      {
+    box-shadow:
+            15px 0px 0 4px $awesome,
+            0px 0px 0 4px $nice,
+            -12.15px -8.85px 0 4px $notMuch,
+            -12.15px 8.85px 0 4px $kindOfBad,
+            4.65px 14.25px 0 4px $bad;
+  }
+  50%   {
+    box-shadow:
+            15px 0px 0 4px $awesome,
+            4.65px -14.25px 0 4px $nice,
+            0px 0px 0 4px $notMuch,
+            -12.15px 8.85px 0 4px $kindOfBad,
+            4.65px 14.25px 0 4px $bad;
+  }
+  66.67% {
+    box-shadow:
+            15px 0px 0 4px $awesome,
+            4.65px -14.25px 0 4px $nice,
+            -12.15px -8.85px 0 4px $notMuch,
+            0px 0px 0 4px $kindOfBad,
+            4.65px 14.25px 0 4px $bad;
+  }
+  88.88% {
+    box-shadow:
+            15px 0px 0 4px $awesome,
+            4.65px -14.25px 0 4px $nice,
+            -12.15px -8.85px 0 4px $notMuch,
+            -12.15px 8.85px 0 4px $kindOfBad,
+            0px 0px 0 4px $bad;
+  }
+  100%{
+    transform:rotate(-360deg);
+    box-shadow:
+            15px 0px 0 4px $awesome,
+            4.65px -14.25px 0 4px $nice,
+            -12.15px -8.85px 0 4px $notMuch,
+            -12.15px 8.85px 0 4px $kindOfBad,
+            4.65px 14.25px 0 4px $bad;
+  }
+}
+
+@-webkit-keyframes loadingViewRotate {
+  16.67%   {
+    box-shadow:
+            0px 0px 0 4px $awesome,
+            4.65px -14.25px 0 4px $nice,
+            -12.15px -8.85px 0 4px $notMuch,
+            -12.15px 8.85px 0 4px $kindOfBad,
+            4.65px 14.25px 0 4px $bad;
+  }
+  33.33%      {
+    box-shadow:
+            15px 0px 0 4px $awesome,
+            0px 0px 0 4px $nice,
+            -12.15px -8.85px 0 4px $notMuch,
+            -12.15px 8.85px 0 4px $kindOfBad,
+            4.65px 14.25px 0 4px $bad;
+  }
+  50%   {
+    box-shadow:
+            15px 0px 0 4px $awesome,
+            4.65px -14.25px 0 4px $nice,
+            0px 0px 0 4px $notMuch,
+            -12.15px 8.85px 0 4px $kindOfBad,
+            4.65px 14.25px 0 4px $bad;
+  }
+  66.67% {
+    box-shadow:
+            15px 0px 0 4px $awesome,
+            4.65px -14.25px 0 4px $nice,
+            -12.15px -8.85px 0 4px $notMuch,
+            0px 0px 0 4px $kindOfBad,
+            4.65px 14.25px 0 4px $bad;
+  }
+  88.88% {
+    box-shadow:
+            15px 0px 0 4px $awesome,
+            4.65px -14.25px 0 4px $nice,
+            -12.15px -8.85px 0 4px $notMuch,
+            -12.15px 8.85px 0 4px $kindOfBad,
+            0px 0px 0 4px $bad;
+  }
+  100%{
+    transform:rotate(-360deg);
+    box-shadow:
+            15px 0px 0 4px $awesome,
+            4.65px -14.25px 0 4px $nice,
+            -12.15px -8.85px 0 4px $notMuch,
+            -12.15px 8.85px 0 4px $kindOfBad,
+            4.65px 14.25px 0 4px $bad;
+  }
+}

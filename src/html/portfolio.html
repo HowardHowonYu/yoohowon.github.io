@@ -1,0 +1,68 @@
+<div class="portfolio--wrap" ng-style="portfolioWrapHeight">
+  <!-- ng-bind-html="invalidEmailTxt" compile-template -->
+  <ul class="portfolio--ul clearfix" ng-style="portfolioColStyle">
+    <li ng-repeat="pf in portfolios"
+        ng-click="clickPortfolio($index)"
+        ng-mouseleave = "mouseover = -1"
+        ng-mouseover = "mouseover = $index">
+      <div class="ng-hide zoomInAndOut portfolio--show--detail"
+           ng-show="mouseover == $index">
+          <span class="portfolio--show--text">
+            <span class="portfolio--preview--common portfolio--preview--title">
+              {{pf.title}}
+            </span>
+            <span class="portfolio--preview--common portfolio--preview--description">
+              {{pf.description_simple}}
+            </span>
+          </span>
+      </div>
+      <div class="portfolio--pic--common" ng-style="pf.thumbnail"></div>
+    </li>
+  </ul>
+  <!-- <div class="ng-hide preventFromClickPortfolioList" ng-show="showPortfolioDetail"></div> -->
+  <div class="ng-hide zoomInAndOut showcase--close--btn"
+       ng-style="closeBtnPosition"
+       ng-show="isContentsReady"
+       ng-click="closeShowcase()">
+    <i class="fas fa-times"></i>
+  </div>
+  <div class="ng-hide zoomInAndOut portfolio--showcase--wrap"
+       ng-style="showcaseWidthStyle"
+       ng-show="showPortfolioDetail">
+    <div class="ng-hide zoomInAndOut youtube--frame"
+         ng-show="isContentsReady" ng-if="contents.product_url != ''">
+      <iframe id="player"
+              class="showcase--youtube--player"
+              type="text/html" width="320" height="180"
+              ng-src="{{contents.product_url}}"
+              frameborder="0">
+      </iframe>
+    </div>
+
+    <div class="ng-hide zoomInAndOut showcase--description"
+         ng-style="{
+           'max-height' : descriptionHeight
+         }"
+         ng-class="{
+           'portfolio--description--marginTop' : contents.type == 1
+         }"
+         ng-show="isContentsReady">
+
+      <h1 class="showcase--title">
+            Title
+      </h1>
+      <h1 class="showcase--text portfolio--title">{{ contents.title }}</h1>
+
+      <h1 class="showcase--title">
+            Description
+      </h1>
+      <h1 class="showcase--text portfolio--title" ng-bind-html="contents.description_detail"></h1>
+
+      <h1 class="showcase--title">
+            Roll
+      </h1>
+      <h1 class="showcase--text portfolio--roll">{{ contents.roll }}</h1>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,396 @@
+@import "../variables.scss";
+
+.portfolio--wrap{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  // align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.portfolio--ul{
+  @include normal_transition(0.3s);
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  // min-width: 300px;
+  // max-width: 800px;
+  // width: 900px;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+}
+
+.portfolio--ul li{
+  @include normal_transition(0.3s);
+  -webkit-flex: 1;
+  flex: 1;
+  float: left;
+  width: 300px;
+  height: 168.5px;
+  text-align: center;
+  // margin-left: 20px;
+  // background-color: #fff;
+  // border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  font-family: $textFont;
+  white-space: pre-line;
+  // box-shadow: 1px 1px 1px #333;
+  // &:hover{
+  //   -ms-transform: scale(1.05, 1.05); /* IE 9 */
+  //   -webkit-transform: scale(1.05, 1.05); /* Safari */
+  //   transform: scale(1.05, 1.05);
+  // }
+}
+
+.portfolio--isOngoing--common{
+  float: right;
+  color: #fff;
+  border-radius: 0px 0px 0px 4px;
+  padding: 2px 6px 2px 6px;
+  box-shadow: 1px 1px 3px #333;
+}
+
+.portfolio--ongoingSign--wrap{
+  background-color: $otherId;
+}
+
+.portfolio--complete--wrap{
+  background-color: $awesome;
+  color: #111;
+}
+
+.portfolio--techstack--wrap{
+  margin-top: 79px;
+  float: left;
+  border-radius: 0 4px 0 0;
+  padding: 2px 6px;
+  box-shadow: none;
+  opacity: 0.5;
+  background-color: #333;
+  color: #fff;
+}
+
+.portfolio--techstack--span{
+  margin-right: 5px;
+}
+
+.portfolio--techstack--span:last-child{
+  margin-right: 0px;
+}
+
+.portfolio--show--detail{
+  width: 300px;
+  height: 168.5px;
+  position: absolute;
+  background-color: #111;
+  opacity: .6;
+  // border-radius: 4px;
+}
+
+.portfolio--show--icon{
+  color: #333;
+  font-size: 40px;
+  margin-top: 130px;
+}
+
+.portfolio--show--text{
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  left: 0;
+}
+
+.portfolio--preview--common{
+  width: 100%;
+  display: block;
+  float:left;
+}
+
+.portfolio--preview--title{
+  font-size: 20px;
+}
+
+.portfolio--preview--description{
+  font-size: 15px;
+}
+
+.portfolio--ul li:first-child{
+  margin-left: 0px;
+}
+
+.portfolio--moreThanOneRow{
+  margin-top: 20px!important;
+}
+
+.portfolio--liNotFirstRowAndFirstOne{
+  margin-left: 0px!important;
+}
+
+.portfolio--pic--common{
+  height: 100%;
+}
+
+.portfolio--jfm{
+  width: 100px;
+  margin-left: 43px;
+  @include backgroundImg("../../img/jfm_icon.png", cover);
+}
+
+.portfolio--walmart--stormy{
+  @include backgroundImg("../../img/walmart.jpg", cover);
+}
+
+.portfolio--walmart--triptype{
+  @include backgroundImg("../../img/walmart.jpg", cover);
+}
+
+.portfolio--instagram--scrapy{
+  @include backgroundImg("../../img/data-mining.png", cover);
+}
+
+.portfolio--humpback--whale{
+  @include backgroundImg("../../img/whale.png", cover);
+}
+
+.show--notebook--btn{
+  position: absolute;
+  bottom: -30px;
+  width: 80%;
+  text-align: center;
+  line-height: 30px;
+  background-color: $notMuch;
+  border-radius: 8px;
+  left: 10%;
+  font-size: 17px;
+  font-family: $textFont;
+  box-shadow: 1px 1px 3px #111;
+  color: #fff;
+  cursor: pointer;
+  &:hover{
+    background-color: #008261;
+  }
+}
+
+.portfolio--portfolioSite{
+  @include backgroundImg("../../img/avatar.png", contain);
+  width: 60px;
+  height: 60px;
+  margin: 20px 70px;
+}
+
+.portfolio--databuzz--blog{
+  @include backgroundImg("../../img/databuzz.png", contain);
+  width: 60px;
+  height: 60px;
+  margin: 20px 70px;
+}
+
+.showcase--iphone--logo{
+  @include backgroundImg("../../img/jfm_index_logo.png", contain);
+  width: 134px;
+  height: 36px;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  margin-top: -18px;
+  margin-left: -67px;
+}
+
+.portfolio--text--common{
+  background-color: #333;
+  color: #fff;
+}
+
+.portfolio--text--common p{
+  margin: 5px;
+  background-color: #fff;
+  color: #333;
+}
+
+.portfolio--text{
+  margin: 5px;
+  font-weight: 400;
+}
+
+.preventFromClickPortfolioList{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.portfolio--showcase--wrap{
+  position: absolute;
+  top: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  z-index: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.youtube--frame{
+  width: 320px;
+  position: absolute;
+  left: 10px;
+}
+
+.iphone--frame{
+  min-width: 200px;
+  min-height: 350px;
+  position: relative;
+  @include backgroundImg("../../img/iphone.png", contain);
+}
+
+.macbook--frame{
+  min-width: 300px;
+  min-height: 200px;
+  position: relative;
+  @include backgroundImg("../../img/macbook.png", contain);
+}
+
+.showcase--close--btn{
+  color: #333;
+  background-color: #eee;
+  position: absolute;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px #111;
+  text-align: center;
+  line-height: 30px;
+  &:hover{
+    color: $nice;
+  }
+}
+
+.showcase--iphone--video{
+  width: 144px;
+  height: 252px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -130px;
+  margin-left: -72px;
+}
+
+.showcase--youtube--player{
+  position: relative;
+}
+
+.showcase--description{
+  max-width: 400px;
+  overflow-y: auto;
+}
+
+.showcase--title{
+  font-family: $textFont;
+  font-size: 17px;
+  background-color: $awesome;
+  color: #333;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+.showcase--text{
+  font-family: $textFont;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.showcase--link{
+  color: #333!important;
+  &:hover{
+    color: $kindOfBad!important;
+  }
+}
+
+.showcase--macbook--image{
+  width: 240px;
+  height: 160px;
+  margin-top: 15px;
+  margin-left: 30px;
+  border-radius: 4px;
+}
+
+.portfolio--preview{
+  @include backgroundImg("../../img/portfolio_screenshot.png", cover);
+}
+
+.databuzz--blog--preview{
+  @include backgroundImg("../../img/databuzz-blog-preview.png", cover);
+}
+
+.walmart--stormy--preview{
+  @include backgroundImg("../../img/walmart.jpg", cover);
+}
+
+.walmart--triptype--preview{
+  @include backgroundImg("../../img/walmart.jpg", cover);
+}
+
+// @media screen and (max-width: 875px) {
+//   .portfolio--ul{
+//     overflow-y: auto;
+//   }
+//
+//   .portfolio--ul li{
+//     float: none;
+//     margin-top: 20px;
+//     margin-left: 50px!important;
+//   }
+//
+//   .portfolio--ul li:first-child{
+//     margin-top: 30px;
+//   }
+//
+//   .portfolio--ul li:last-child{
+//     margin-bottom: 30px;
+//   }
+//
+//   .showcase--description{
+//     position: relative;
+//     top: 20px;
+//     margin-bottom: 20px;
+//     width: 290px;
+//     padding: 5px;
+//     max-height: none!important;
+//   }
+//
+//   .iphone--frame{
+//     top: 20px;
+//   }
+//
+//   .macbook--frame{
+//     padding: 1px;
+//     top: 20px;
+//   }
+//
+//   .portfolio--description--marginTop{
+//     margin-top: 40px;
+//   }
+//
+//   .portfolio--showcase--wrap{
+//     display: block;
+//   }
+//
+// }

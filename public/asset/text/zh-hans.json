@@ -1,0 +1,21 @@
+{
+  "Change Language" : "选择语言",
+  "Which language do you prefer?" : "Which language do you prefer?",
+  "Name" : "유호원",
+  "Resume Download!" : "履历下载",
+  "About First Paragraph" : "I'm a full-stack programmer, learner, and a data scientist who is enthusiastic and committed to learning new technologies to improve the quality of people’s lives.",
+  "About Second Paragraph" : "For the last 2 years, I had worked as programmer where I was responsible for developing a hybrid app using both languages in client side and server side. During this time, I became very interested and fascinated by the capabilities machine learning can have to improve services. This fascination led me to enroll in Fast Campus(Data Science School) and learned data science from scratch.",
+  "About Third Paragraph" : "I firmly believe that the future for all businesses will rely on data technologies to make decisions to improve businesses.",
+  "About Forth Paragraph" : "Now I am currently searching for an opportunity with the potential for growth where I can utilize all my skill sets.",
+  "Tap to see more" : "点击可看详情!",
+  "jfm_description" : "Startup product\n JustForMe is a diary-based social media.",
+  "portfolio_description" : "Portfolio Web View\n You're looking at it now!",
+  "walmat_stormy_description" : "Kaggle Competition\n Predict how sales of weather-sensitive products are affected by snow and rain.",
+  "walmat_stormy_description_detail" : "• About : Found features that have the influence on unit sales and then predicted it by Ordinary Least Squares Model.<br><br>• Period : 2018. 06 - 2018. 07<br>• Train Data - 4 variables and 4617600 sales data<br>• Test Data - 3 variables and 526917 sales data<br>• Weather Data - 20 variables and 20517 weather data<br>• Model : Ordinary Least Squares Model<br><br>• For more details see notebook",
+  "walmat_triptype_description" : "Kaggle Competition\n Classify shopping trips using transactional dataset of the items customers have purchased.",
+  "walmat_triptype_description_detail" : "• About : Classification competition. Classify shopping trips using transactional dataset of the items customers have purchased by XGBoost | Kaggle Competition<br><br>• Period : 2018. 07 - 2018. 08<br>• Train Data - 7 variables and 647054 sales data<br>• Test Data - 6 variables and 653646 sales data<br>• Model : XGBoost Classification<br>• Kaggle score : 0.67767 | Kaggle rank : 201/1047 (19.2%)<br><br>• For more details see notebook",
+  "insta_scrapy_description" : "Crawling & Data Mining Project\n Crawled instagram datas using Scrapy framework to find out what kind of tags are being used in Seoul to get an interesting insight.",
+  "databuzz_team_tech_blog" : "Me and associates formed tech blog team called DataBuzz. Contributed editing hexo framework and articles about Data Science.",
+  "Today I Learned" : "Today I Learned",
+  "Click to see notebook" : "Click to see notebook"
+}

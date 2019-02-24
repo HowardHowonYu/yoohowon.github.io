@@ -1,0 +1,187 @@
+/* body */
+@keyframes loadingViewRotate {
+  16.67% {
+    box-shadow: 0px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; }
+  33.33% {
+    box-shadow: 15px 0px 0 4px #ffe768, 0px 0px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; }
+  50% {
+    box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, 0px 0px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; }
+  66.67% {
+    box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, 0px 0px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; }
+  88.88% {
+    box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 0px 0px 0 4px #644972; }
+  100% {
+    transform: rotate(-360deg);
+    box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; } }
+
+#header--wrap {
+  width: 100%;
+  height: 80px;
+  position: relative; }
+
+.header--logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer !important;
+  background-image: url("../../img/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  z-index: 1; }
+
+.header--home {
+  position: relative;
+  top: 25px;
+  left: 25px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer !important;
+  background-image: url("../../img/solar-system.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.header--select--language {
+  position: absolute;
+  left: 55px;
+  bottom: 0;
+  white-space: nowrap;
+  font-size: 15px;
+  font-family: Bowlby One SC,Do Hyeon,cursive; }
+
+.header__name--wrap {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+  right: 5px;
+  top: 20px;
+  position: absolute;
+  width: 250px; }
+
+.header__face--icon {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 30px;
+  top: 25px;
+  background-image: url("../../img/avatar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.header--name {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 200px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 50px;
+  font-family: "Arial";
+  color: #333; }
+
+.languageSelect--wrap {
+  position: relative;
+  width: 100%;
+  color: #333;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.languageSelect--languageSelectTxt {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Arial";
+  margin-top: -85px; }
+
+.languageSelect--option {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+  font-size: 25px; }
+
+.languageSelect--div {
+  font-family: "Arial";
+  line-height: 40px;
+  text-align: center;
+  margin-top: 25px;
+  position: absolute; }
+  .languageSelect--div:hover {
+    cursor: pointer !important; }
+
+.languageOption--hover {
+  color: #00a178; }
+
+#loading--wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 9999; }
+
+.loading--box {
+  background-color: #fff;
+  opacity: 0.8;
+  border-radius: 4px;
+  position: absolute;
+  width: 80px;
+  left: 50%;
+  margin-left: -40px;
+  height: 80px;
+  top: 50%;
+  margin-top: -40px; }
+
+.loading--circle {
+  border-radius: 50%;
+  height: 2px;
+  width: 2px;
+  /* To allow border-radius to work */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -1px;
+  background-color: #fff;
+  box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972;
+  animation: loadingViewRotate 3s infinite linear; }
+
+.modal--background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  opacity: .6;
+  z-index: 1000;
+  top: 0;
+  left: 0; }
+
+.jupyter--notebook--showcase {
+  position: absolute;
+  width: 90%;
+  height: 80%;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px #111;
+  z-index: 1001;
+  top: 10%;
+  left: 5%; }
+
+.notebook--close--btn {
+  z-index: 1002 !important;
+  top: 10%;
+  margin-top: -15px;
+  right: 5%;
+  margin-right: -15px;
+  background-color: #cb4a44 !important;
+  color: #fff !important; }
+  .notebook--close--btn:hover {
+    color: #eee !important; }
+
+/*# sourceMappingURL=index.css.map */

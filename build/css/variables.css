@@ -1,0 +1,17 @@
+/* body */
+@keyframes loadingViewRotate {
+  16.67% {
+    box-shadow: 0px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; }
+  33.33% {
+    box-shadow: 15px 0px 0 4px #ffe768, 0px 0px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; }
+  50% {
+    box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, 0px 0px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; }
+  66.67% {
+    box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, 0px 0px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; }
+  88.88% {
+    box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 0px 0px 0 4px #644972; }
+  100% {
+    transform: rotate(-360deg);
+    box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; } }
+
+/*# sourceMappingURL=variables.css.map */

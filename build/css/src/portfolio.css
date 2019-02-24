@@ -1,0 +1,342 @@
+/* body */
+@keyframes loadingViewRotate {
+  16.67% {
+    box-shadow: 0px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; }
+  33.33% {
+    box-shadow: 15px 0px 0 4px #ffe768, 0px 0px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; }
+  50% {
+    box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, 0px 0px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; }
+  66.67% {
+    box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, 0px 0px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; }
+  88.88% {
+    box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 0px 0px 0 4px #644972; }
+  100% {
+    transform: rotate(-360deg);
+    box-shadow: 15px 0px 0 4px #ffe768, 4.65px -14.25px 0 4px #cb4a44, -12.15px -8.85px 0 4px #00a178, -12.15px 8.85px 0 4px #85cfec, 4.65px 14.25px 0 4px #644972; } }
+
+.portfolio--wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+.portfolio--ul {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px; }
+
+.portfolio--ul li {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+  -ms-flex: 1;
+      flex: 1;
+  float: left;
+  width: 300px;
+  height: 168.5px;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  font-family: "Arial";
+  white-space: pre-line; }
+
+.portfolio--isOngoing--common {
+  float: right;
+  color: #fff;
+  border-radius: 0px 0px 0px 4px;
+  padding: 2px 6px 2px 6px;
+  box-shadow: 1px 1px 3px #333; }
+
+.portfolio--ongoingSign--wrap {
+  background-color: #6770e8; }
+
+.portfolio--complete--wrap {
+  background-color: #ffe768;
+  color: #111; }
+
+.portfolio--techstack--wrap {
+  margin-top: 79px;
+  float: left;
+  border-radius: 0 4px 0 0;
+  padding: 2px 6px;
+  box-shadow: none;
+  opacity: 0.5;
+  background-color: #333;
+  color: #fff; }
+
+.portfolio--techstack--span {
+  margin-right: 5px; }
+
+.portfolio--techstack--span:last-child {
+  margin-right: 0px; }
+
+.portfolio--show--detail {
+  width: 300px;
+  height: 168.5px;
+  position: absolute;
+  background-color: #111;
+  opacity: .6; }
+
+.portfolio--show--icon {
+  color: #333;
+  font-size: 40px;
+  margin-top: 130px; }
+
+.portfolio--show--text {
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  left: 0; }
+
+.portfolio--preview--common {
+  width: 100%;
+  display: block;
+  float: left; }
+
+.portfolio--preview--title {
+  font-size: 20px; }
+
+.portfolio--preview--description {
+  font-size: 15px; }
+
+.portfolio--ul li:first-child {
+  margin-left: 0px; }
+
+.portfolio--moreThanOneRow {
+  margin-top: 20px !important; }
+
+.portfolio--liNotFirstRowAndFirstOne {
+  margin-left: 0px !important; }
+
+.portfolio--pic--common {
+  height: 100%; }
+
+.portfolio--jfm {
+  width: 100px;
+  margin-left: 43px;
+  background-image: url("../../img/jfm_icon.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.portfolio--walmart--stormy {
+  background-image: url("../../img/walmart.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.portfolio--walmart--triptype {
+  background-image: url("../../img/walmart.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.portfolio--instagram--scrapy {
+  background-image: url("../../img/data-mining.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.portfolio--humpback--whale {
+  background-image: url("../../img/whale.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.show--notebook--btn {
+  position: absolute;
+  bottom: -30px;
+  width: 80%;
+  text-align: center;
+  line-height: 30px;
+  background-color: #00a178;
+  border-radius: 8px;
+  left: 10%;
+  font-size: 17px;
+  font-family: "Arial";
+  box-shadow: 1px 1px 3px #111;
+  color: #fff;
+  cursor: pointer; }
+  .show--notebook--btn:hover {
+    background-color: #008261; }
+
+.portfolio--portfolioSite {
+  background-image: url("../../img/avatar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 20px 70px; }
+
+.portfolio--databuzz--blog {
+  background-image: url("../../img/databuzz.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 20px 70px; }
+
+.showcase--iphone--logo {
+  background-image: url("../../img/jfm_index_logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 134px;
+  height: 36px;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  margin-top: -18px;
+  margin-left: -67px; }
+
+.portfolio--text--common {
+  background-color: #333;
+  color: #fff; }
+
+.portfolio--text--common p {
+  margin: 5px;
+  background-color: #fff;
+  color: #333; }
+
+.portfolio--text {
+  margin: 5px;
+  font-weight: 400; }
+
+.preventFromClickPortfolioList {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1; }
+
+.portfolio--showcase--wrap {
+  position: absolute;
+  top: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  z-index: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; }
+
+.youtube--frame {
+  width: 320px;
+  position: absolute;
+  left: 10px; }
+
+.iphone--frame {
+  min-width: 200px;
+  min-height: 350px;
+  position: relative;
+  background-image: url("../../img/iphone.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.macbook--frame {
+  min-width: 300px;
+  min-height: 200px;
+  position: relative;
+  background-image: url("../../img/macbook.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.showcase--close--btn {
+  color: #333;
+  background-color: #eee;
+  position: absolute;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px #111;
+  text-align: center;
+  line-height: 30px; }
+  .showcase--close--btn:hover {
+    color: #cb4a44; }
+
+.showcase--iphone--video {
+  width: 144px;
+  height: 252px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -130px;
+  margin-left: -72px; }
+
+.showcase--youtube--player {
+  position: relative; }
+
+.showcase--description {
+  max-width: 400px;
+  overflow-y: auto; }
+
+.showcase--title {
+  font-family: "Arial";
+  font-size: 17px;
+  background-color: #ffe768;
+  color: #333;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 10px; }
+
+.showcase--text {
+  font-family: "Arial";
+  padding: 10px;
+  font-size: 15px; }
+
+.showcase--link {
+  color: #333 !important; }
+  .showcase--link:hover {
+    color: #85cfec !important; }
+
+.showcase--macbook--image {
+  width: 240px;
+  height: 160px;
+  margin-top: 15px;
+  margin-left: 30px;
+  border-radius: 4px; }
+
+.portfolio--preview {
+  background-image: url("../../img/portfolio_screenshot.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.databuzz--blog--preview {
+  background-image: url("../../img/databuzz-blog-preview.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.walmart--stormy--preview {
+  background-image: url("../../img/walmart.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.walmart--triptype--preview {
+  background-image: url("../../img/walmart.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+/*# sourceMappingURL=portfolio.css.map */
